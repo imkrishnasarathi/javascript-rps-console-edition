@@ -3,7 +3,7 @@ let playerScore = 0;
 let computerScore = 0;
 let count = 0;
 
-function freshGame(){
+/* function freshGame(){
     let readyOrNot = prompt("Are you ready for this game? (Y/N)");
     isReady(readyOrNot);
     playerScore = 0;
@@ -100,3 +100,5 @@ function game(player){
         }
     }
 }
+
+*/
