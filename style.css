@@ -3,12 +3,87 @@
   padding: 0;
 }
 
-body{
+body{;
+  align-items: center;
+  justify-items: center;
+  width: 100vw;
   height: 100vh;
   background-color: #1B1B1B;
 }
 
+#main{
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+}
+
 #mainHeading{
   color: aliceblue;
+
   font-family: 'Trebuchet MS', sans-serif;
+}
+
+#userScore{
+  color: white;
+  margin-right: 15%;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 2em;
+}
+
+#computerScore{
+  color:white;
+  font-size: 2em;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+#Scores{
+  display: flex;
+  margin: 1em;
+  justify-items:center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100vw;
+
+}
+
+#buttons{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  gap: 2rem;
+}
+
+#rock,
+#paper,
+#scissors{
+  background-color: rgb(170,215,212);
+  border: none;
+  color:black;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  height: 6em;
+  width: 6em;
+  font-size: 1.5rem;
+  display:flex;
+  justify-items: center;
+  align-items: center;
+  display: block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.3s;
+  cursor: pointer;
+  box-shadow: 0 9px #999;
+  border-radius: 50%;
+}
+
+.btn:active{
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#rock:hover, #paper:hover, #scissors:hover{
+  background-color: #4caf50;
+  color:white;
 }
