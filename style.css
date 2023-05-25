@@ -5,4 +5,10 @@
 
 body{
   height: 100vh;
+  background-color: #1B1B1B;
+}
+
+#mainHeading{
+  color: aliceblue;
+  font-family: 'Trebuchet MS', sans-serif;
 }
