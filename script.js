@@ -2,39 +2,14 @@ const choices = ['rock', 'paper', 'scissors'];
 let playerScore = 0;
 let computerScore = 0;
 let count = 0;
+let choiceBtn = document.getElementsByClassName('choice');
+let startBtn = document.querySelector('#start')
 
-/* function freshGame(){
-    let readyOrNot = prompt("Are you ready for this game? (Y/N)");
-    isReady(readyOrNot);
-    playerScore = 0;
-    computerScore = 0;
-}
-
-freshGame();
-
-function isReady(ready){
-    if (ready==="Y" || ready==="y"){
-        alert("Then Let's start!")
-        while (count<6){
-            getPlayerChoice();
-        }
-    }
-    else if (ready==="N" || ready==="n"){
-        alert('Okay, but what are you waiting for, go get ready!')
-    }
-    else if(ready===null || ready==="null"){
-        return;
-    }
-    else{
-        alert("invalid answer.")
-        freshGame();
-    }
-}
-
-function getPlayerChoice(){
-    choice = prompt("What is your selection - Rock, Paper or Scissors?(Type the full Word)")
-    game(choice);
-}
+choiceBtn.forEach((button)=>{
+    button.addEventListener('click', (e)=>{
+        let userChoice = e.className;
+    })
+})
 
 function game(player){
     let computer = choices[(Math.floor(Math.random() * choices.length))];
@@ -101,4 +76,4 @@ function game(player){
     }
 }
 
-*/
+
