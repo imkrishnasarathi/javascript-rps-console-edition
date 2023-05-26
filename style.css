@@ -4,19 +4,21 @@
 }
 
 body{
-  align-items: center;
-  justify-items: center;
+  display: flex;
   width: 100vw;
   height: 100vh;
   background-color: #1B1B1B;
+  align-items: center;
+  justify-content: center;
 }
 
 #main{
   width: 100%;
+  height: 100vh;
   display:flex;
   flex-direction: column;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
 }
 
 #mainHeading{
@@ -61,20 +63,19 @@ body{
 #rock,
 #paper,
 #scissors{
-  background-color: rgb(170,215,212);
+  background-color: rgb(0, 142, 133);
   border: none;
   color:black;
   padding: 16px 32px;
   text-align: center;
   text-decoration: none;
-  height: 6em;
-  width: 6em;
-  font-size: 1.5rem;
+  height: 5em;
+  width: 5em;
+  font-size: 20px;
   display:flex;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
   display: block;
-  font-size: 16px;
   margin: 4px 2px;
   transition-duration: 0.3s;
   cursor: pointer;
@@ -82,9 +83,9 @@ body{
   border-radius: 50%;
 }
 
-.btn:active{
+#rock:active, #paper:active, #scissors:active{
   background-color: #3e8e41;
-  box-shadow: 0 5px #666;
+  box-shadow: none;
   transform: translateY(4px);
 }
 #rock:hover, #paper:hover, #scissors:hover{
@@ -113,6 +114,6 @@ h3{
   display:flex;
   flex-direction:column;
   gap: 0.3rem;
-  justify-items:center;
+  justify-content:center;
   align-items: center;
 }
