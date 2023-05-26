@@ -3,7 +3,7 @@
   padding: 0px;
 }
 
-body{;
+body{
   align-items: center;
   justify-items: center;
   width: 100vw;
@@ -71,7 +71,7 @@ body{;
   width: 6em;
   font-size: 1.5rem;
   display:flex;
-  justify-items: center;                                  
+  justify-items: center;
   align-items: center;
   display: block;
   font-size: 16px;
@@ -86,14 +86,14 @@ body{;
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
-}                                                          
+}
 #rock:hover, #paper:hover, #scissors:hover{
   background-color: #4caf50;
   color:white;
 }
 
 #reload{
-  margin-top: 4vh;                                         
+  margin-top: 4vh;
   margin-top: 4vh;
   width:80%;
   height:6em;
@@ -101,9 +101,9 @@ body{;
   visibility: hidden;
 }
 h3{
-  color: aliceblue;                                        
-  font-size: 1.5em;                                       
-  font-family: 'Trebuchet MS', sans-serif;                
+  color: aliceblue;
+  font-size: 1.5em;
+  font-family: 'Trebuchet MS', sans-serif;
  }
 #container{
   border: 3px solid white;
