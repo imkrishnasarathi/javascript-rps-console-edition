@@ -11,7 +11,7 @@ body {
   background-color: #1B1B1B;
   align-items: center;
   justify-content: center;
-  overflow-x: hidden; /* Prevent horizontal scrollbar */
+  overflow-x: hidden; 
 }
 
 #main {
@@ -21,7 +21,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow-x: hidden; /* Prevent horizontal scrollbar */
+  overflow-x: hidden; 
 }
 
 #mainHeading {
@@ -64,8 +64,8 @@ body {
   text-align: center;
   font-family: 'Trebuchet MS', sans-serif;
   font-size: 1.5em;
-  width: 50%; /* Limit width to fit within container */
-  flex-shrink: 0; /* Prevent items from shrinking */
+  width: 50%; 
+  flex-shrink: 0;
 }
 
 #Scores {
@@ -147,5 +147,5 @@ h3 {
   gap: 0.3rem;
   justify-content: center;
   align-items: center;
-  overflow: auto; /* Enable vertical scrolling if needed */
+  overflow: auto;
 }
