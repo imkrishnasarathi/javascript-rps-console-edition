@@ -3,7 +3,9 @@ let playerScore = 0;
 let computerScore = 0;
 let count = 0;
 let choiceBtn = document.getElementsByClassName('choice');
-let startBtn = document.querySelector('#start')
+let startBtn = document.querySelector('#start');
+let userScoreText = document.querySelector('#userScore');
+let botScoreText = document.querySelector('#computerScore');
 
 choiceBtn.forEach((button)=>{
     button.addEventListener('click', (e)=>{
