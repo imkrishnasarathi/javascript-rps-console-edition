@@ -11,7 +11,7 @@ body {
   background-color: #1B1B1B;
   align-items: center;
   justify-content: center;
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 
 #main {
@@ -21,7 +21,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 
 #mainHeading {
@@ -64,7 +64,7 @@ body {
   text-align: center;
   font-family: 'Trebuchet MS', sans-serif;
   font-size: 1.5em;
-  width: 50%; 
+  width: 50%;
   flex-shrink: 0;
 }
 
@@ -125,10 +125,30 @@ body {
 
 #reload {
   margin-top: 4vh;
-  width: 80%;
-  height: 6em;
-  font-size: 1em;
-  visibility: hidden;
+  width: 60%;
+  height: fit-content;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 1.2rem;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  /* visibility: hidden; */
+}
+
+#reload:hover {background-color: #3e8e41}
+
+#reload:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 h3 {
