@@ -9,7 +9,7 @@ let botScoreText = document.querySelector('#computerScore');
 let roundResult = document.getElementById('roundResult');
 let totalResult = document.getElementById('totalResult');
 
-startBtn.addEventListener('click', freshGame);
+startBtn.addEventListener('click', startGame);
 
 Array.from(choiceBtn).forEach((button)=>{
         button.disabled = true;
@@ -21,7 +21,7 @@ Array.from(choiceBtn).forEach((button)=>{
     })
 })
 
-function freshGame(e){
+function startGame(e){
     e.target.disabled = true;
     e.target.style.cursor = "not-allowed";
     e.target.style.opacity = '40%';
