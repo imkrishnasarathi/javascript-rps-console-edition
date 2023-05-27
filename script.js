@@ -6,6 +6,8 @@ let choiceBtn = document.getElementsByClassName('choice');
 let startBtn = document.querySelector('#start');
 let userScoreText = document.querySelector('#userScore');
 let botScoreText = document.querySelector('#computerScore');
+let roundResult = document.getElementById('roundResult');
+let totalResult = document.getElementById('totalResult');
 
 startBtn.addEventListener('click', freshGame);
 
