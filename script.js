@@ -8,18 +8,21 @@ let userScoreText = document.querySelector('#userScore');
 let botScoreText = document.querySelector('#computerScore');
 let roundResult = document.getElementById('roundResult');
 let totalResult = document.getElementById('totalResult');
+let reloadBtn = document.getElementById('reload');
 
 startBtn.addEventListener('click', startGame);
 
 Array.from(choiceBtn).forEach((button)=>{
-        button.disabled = true;
-        button.style.opacity = '40%';
-        button.style.cursor = 'not-allowed';
+    button.disabled = true;
+    button.style.opacity = '40%';
+    button.style.cursor = 'not-allowed';
     button.addEventListener('click', (e)=>{
-        let userChoice = e.className;
+        let userChoice = e.target.id;
+        console.log(userChoice);
         game(userChoice);
     })
 })
+
 
 function startGame(e){
     e.target.disabled = true;
@@ -33,67 +36,75 @@ function startGame(e){
 }
 
 function game(player){
-    let computer = choices[(Math.floor(Math.random() * choices.length))];
-    if (player.toLowerCase() === 'scissors' ){
+    let computer = choices[Math.floor(Math.random()*choices.length)];
+    if (player === 'scissors' ){
         if (computer.toLowerCase() === 'rock'){
-            console.log('Alas, you lost! Computer Won! Rock beats Scissors!');
+            roundResult.textContent = 'You lost! Computer Won! Rock beats Scissors!';
             computerScore++;
 
         }
         else if(computer.toLowerCase() === 'scissors'){
-            console.log('It\'s a draw!');
+            roundResult.textContent = 'It\'s a draw!';
             computerScore++;
             playerScore++;
         }
         else{
-            console.log("You Won! Scissor Cuts Paper!")
+            roundResult.textContent = "You Won! Scissor Cuts Paper!";
             playerScore++;
         }
     }
-    else if(player.toLowerCase() === 'paper'){
+    else if(player === 'paper'){
         if (computer.toLowerCase() === 'rock'){
-            console.log('You Won! Paper Covers Rock!');
+            roundResult.textContent = 'You Won! Paper Covers Rock!';
             playerScore++;
         }
         else if(computer.toLowerCase() === 'scissors'){
-            console.log("You Lost! Scissor Cuts Paper!");
+            roundResult.textContent = "You Lost! Scissor Cuts Paper!";
             computerScore++;
         }
         else{
-            console.log('It\'s a draw!');
+            roundResult.textContent = 'It\'s a draw!';
             playerScore++;
             computerScore++;
         }
     }
-    else if(player.toLowerCase() === 'rock'){
+    else if(player === 'rock'){
         if (computer.toLowerCase() === 'rock'){
-            console.log('It\'s a draw!');
+            roundResult.textContent = 'It\'s a draw!';
             playerScore++;
             computerScore++;
         }
         else if(computer.toLowerCase() === 'scissors'){
-            console.log("You Won! Rock beats Scissors!");
+            roundResult.textContent = "You Won! Rock beats Scissors!";
             playerScore++;
         }
         else{
-            console.log('Alas, you lost! Computer Won! Paper Covers Rock!');
+            roundResult.textContent = 'You lost! Computer Won! Paper Covers Rock!';
             computerScore++;
         }
     }
     else{
         return;
     }
+    userScoreText.textContent = `Your Score: ${playerScore.toString()}`;
+    botScoreText.textContent = `Bot Score: ${computerScore.toString()}`;
     count++;
-    if (count===6){
+    if (playerScore === 5 || computerScore === 5){
         if (playerScore > computerScore){
-            console.log("FINAL RESULT: Hooray! You Are The Winner! 🏆");
+            totalResult.textContent = "FINAL RESULT: Hooray! You Are The Winner! 🏆";
         }
         else if(computerScore > playerScore){
-            console.log('FINAL RESULT: Alas, You Lost!');
+            totalResult.textContent = 'FINAL RESULT: Alas, You Lost!';
         }
         else if(computerScore === playerScore){
-            console.log('FINAL RESULT: It\'s a tie')
+            totalResult.textContent = 'FINAL RESULT: It\'s a tie'
         }
+        Array.from(choiceBtn).forEach((button)=>{
+            button.disabled = true;
+            button.style.opacity = '40%';
+            button.style.cursor = 'not-allowed';
+        })
+        reloadBtn.style.visibility = 'visible';
     }
 }
 
