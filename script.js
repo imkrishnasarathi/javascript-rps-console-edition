@@ -7,11 +7,28 @@ let startBtn = document.querySelector('#start');
 let userScoreText = document.querySelector('#userScore');
 let botScoreText = document.querySelector('#computerScore');
 
-choiceBtn.forEach((button)=>{
+startBtn.addEventListener('click', freshGame);
+
+Array.from(choiceBtn).forEach((button)=>{
+        button.disabled = true;
+        button.style.opacity = '40%';
+        button.style.cursor = 'not-allowed';
     button.addEventListener('click', (e)=>{
         let userChoice = e.className;
+        game(userChoice);
     })
 })
+
+function freshGame(e){
+    e.target.disabled = true;
+    e.target.style.cursor = "not-allowed";
+    e.target.style.opacity = '40%';
+    Array.from(choiceBtn).forEach((button)=>{
+        button.disabled = false;
+        button.style.opacity = '100%';
+        button.style.cursor = 'pointer';
+    })
+}
 
 function game(player){
     let computer = choices[(Math.floor(Math.random() * choices.length))];
