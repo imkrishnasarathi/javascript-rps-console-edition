@@ -8,4 +8,4 @@ This branch hosts the game of Rock Paper Scissors developed by me in a 100DaysOf
   <li>JS</li>
 </ul>
 
-**Developed Bye**
+**Developed By**
