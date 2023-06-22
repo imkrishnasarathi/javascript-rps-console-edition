@@ -9,3 +9,4 @@ This branch hosts the game of Rock Paper Scissors developed by me in a 100DaysOf
 </ul>
 
 **Developed By :**<br>
+Krishna Sarathi Ghosh
