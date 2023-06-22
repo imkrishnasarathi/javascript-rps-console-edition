@@ -4,6 +4,6 @@ This branch hosts the game of Rock Paper Scissors developed by me in a 100DaysOf
 **Languages Used:**
 <ul>
   <li>HTML</li>
-  <li>HTML</li>
+  <li>CSS</li>
   <li>HTML</li>
 </ul>
